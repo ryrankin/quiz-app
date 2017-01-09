@@ -1,5 +1,5 @@
 var quiz = [{     
-  "question": "What historic structure, lying on the Delaware River, was once used during the American Revolutionary War, and later housed prisoners during the American civil war?",
+  "question": "What historic structure, lying on the Delaware River, was once used during the American Revolutionary War, and later housed prisoners during the American Civil War?",
   "choices": ["Eastern State Penetentary", "Holmesburg Prison", "Fort Mifflin", "SCI Graterford"],
   "correct": "Fort Mifflin"
 }, {
@@ -7,15 +7,15 @@ var quiz = [{
   "choices": ["Essington, PA", "Eddystone, PA", "Ridley Park, PA", "Chester, PA"],
   "correct": "Chester, PA"
 }, {
-  "question": "Prospect Hill Baptist Church in Prospect Park, PA, holds claim to what important,historical role in American history?",
+  "question": "Prospect Hill Baptist Church in Prospect Park, PA, holds credit to what important, historical role in American history?",
   "choices": ["The Underground Railroad", "In God We Trust", "Prohibition", "Oldest Protestant church in PA"],
   "correct": "In God We Trust"
 }, {
-  "question" : "This building, considered the first quarantine hospital in the Unites States, once housed victims of the Yellow Fever Epidemic, killing one-tenth of Philadelphia's population.",
+  "question" : "This building, considered the first quarantine-hospital in the Unites States, once housed victims of the Yellow Fever Epidemic, killing one-tenth of Philadelphia's population.",
   "choices" : ["Hospital of the University of Pennsylvania", "Philadelphia Lazaretto", "Pennsylvania Hospital", "Institute of the Pennsylvania Hospital"],
   "correct" : "Philadelphia Lazaretto"
 }, {
-  "question" : "This street, located in Philadelphia, is considered to be the oldest, continuously inhabited, resedential streets in America.",
+  "question" : "This street, located in Philadelphia, is considered to be the oldest, continuously inhabited, resedential street in America.",
   "choices" : ["Elfreths Alley", "69th Street", "Arch Street", "Delaware Avenue"],
   "correct" : "Elfreths Alley"
 }, {
@@ -118,14 +118,14 @@ function checkAnswer(){
       currentQuestion++;
       askQuestion();
     } else {
-      showFinalResults();
+      showResults();
     }
   }
 }
 
-function showFinalResults() {
+function showResults() {
   content.innerHTML = "<h2>You've completed the quiz!</h2>" +
-    "<h2>Below are your results:</h2>" +
+    "<h2>How well do you know Philadelphia?</h2>" +
     "<h2>" + score + " out of " + quiz.length + " questions, " +
     Math.round(score / quiz.length * 100) + "%<h2>";
 }
