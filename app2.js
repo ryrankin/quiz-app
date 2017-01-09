@@ -7,7 +7,7 @@ var quiz = [{
   "choices": ["Essington, PA", "Eddystone, PA", "Ridley Park, PA", "Chester, PA"],
   "correct": "Chester, PA"
 }, {
-  "question": "Prospect Hill Baptist Church in Prospect Park, PA, holds claim to what historical role in American history?",
+  "question": "Prospect Hill Baptist Church in Prospect Park, PA, holds claim to what important,historical role in American history?",
   "choices": ["The Underground Railroad", "In God We Trust", "Prohibition", "Oldest Protestant church in PA"],
   "correct": "In God We Trust"
 }, {
@@ -27,7 +27,7 @@ var quiz = [{
   "choices" : ["John Heinz Wildlife Refuge", "Fairmount Park", "FDR Park", "John J. Tyler Arboretum"],
   "correct" : "John Heinz Wildlife Refuge"
 }, {
-  "question" : "This famous restauranteur got his start in 1995, after opening his first successful restaurant in Old City, Philadelphia; and is 'arguably the key reason for the city's revitalized culinary scene.",
+  "question" : "This famous restauranteur got his start in 1995, after opening his first successful restaurant in Old City, Philadelphia; and is 'arguably the key reason for the city's revitalized culinary scene.'",
   "choices" : ["Jen Carroll", "Morimoto", "Stephen Starr", "Anthony Bourdain"],
   "correct" : "Stephen Starr"
 }];
@@ -45,16 +45,16 @@ var currentQuestion = 0,
   score = 0,
   askingQuestion = true;
 
-function $(id) { // shortcut for document.getElementById
+function $(id){ // shortcut for document.getElementById
   return document.getElementById(id);
 }
 
-function askQuestion() {
+function askQuestion(){
   var choices = quiz[currentQuestion].choices,
     choicesHtml = "";
 
   // loop through choices, and create radio buttons
-  for (var i = 0; i < choices.length; i++) {
+  for (var i=0; i < choices.length; i++) {
     choicesHtml += "<input type='radio' name='quiz" + currentQuestion +
       "' id='choice" + (i + 1) +
       "' value='" + choices[i] + "'>" +
@@ -69,14 +69,14 @@ function askQuestion() {
   choicesContainer.innerHTML = choicesHtml;
 
   // setup for the first time
-  if (currentQuestion === 0) {
+  if (currentQuestion === 0){
     scoreContainer.textContent = "Score: 0 correct answers out of " +
       quiz.length + " possible.";
     submitBtn.textContent = "Submit Answer";
   }
 }
 
-function checkAnswer() {
+function checkAnswer(){
   // are we asking a question, or moving to next question?
   if (askingQuestion) {
     submitBtn.textContent = "Next Question";
@@ -87,7 +87,7 @@ function checkAnswer() {
       correctIndex,
       radios = document.getElementsByName("quiz" + currentQuestion);
     for (var i=0; i < radios.length; i++) {
-      if (radios[i].checked) { // if this radio button is checked
+      if (radios[i].checked){
         userpick = radios[i].value;
       }
 
@@ -113,7 +113,7 @@ function checkAnswer() {
     askingQuestion = true;
     // change button text back to "Submit Answer"
     submitBtn.textContent = "Submit Answer";
-    // if we're not on last question, increase question number
+    // if we're not at last question yet, increase question number
     if (currentQuestion < quiz.length - 1) {
       currentQuestion++;
       askQuestion();
@@ -124,7 +124,7 @@ function checkAnswer() {
 }
 
 function showFinalResults() {
-  content.innerHTML = "<h2>You've complited the quiz!</h2>" +
+  content.innerHTML = "<h2>You've completed the quiz!</h2>" +
     "<h2>Below are your results:</h2>" +
     "<h2>" + score + " out of " + quiz.length + " questions, " +
     Math.round(score / quiz.length * 100) + "%<h2>";
