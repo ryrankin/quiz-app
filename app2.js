@@ -47,7 +47,7 @@ var currentQuestion = 0,
 
 function $(id){ // shortcut for document.getElementById
   return document.getElementById(id);
-}
+};
 
 function askQuestion(){
   var choices = quiz[currentQuestion].choices,
@@ -59,7 +59,7 @@ function askQuestion(){
       "' id='choice" + (i + 1) +
       "' value='" + choices[i] + "'>" +
       " <label for='choice" + (i + 1) + "'>" + choices[i] + "</label><br>";
-  }
+  };
 
   // load the question
   questionContainer.textContent = "Q" + (currentQuestion + 1) + ". " +
@@ -71,10 +71,10 @@ function askQuestion(){
   // setup for the first time
   if (currentQuestion === 0){
     scoreContainer.textContent = "Score: 0 correct answers out of " +
-      quiz.length + " possible.";
+      quiz.length + " possible questions.";
     submitBtn.textContent = "Submit Answer";
   }
-}
+};
 
 function checkAnswer(){
   // are we asking a question, or moving to next question?
@@ -89,6 +89,7 @@ function checkAnswer(){
     for (var i=0; i < radios.length; i++) {
       if (radios[i].checked){
         userpick = radios[i].value;
+
       }
 
       // get index of correct answer
@@ -107,12 +108,15 @@ function checkAnswer(){
     }
 
     scoreContainer.textContent = "Score: " + score + " correct answers out of " +
-      quiz.length + " possible.";
+      quiz.length + " possible questions.";
   } else { // move to next question
+    
     // setting up so user can ask a question
     askingQuestion = true;
+    
     // change button text back to "Submit Answer"
     submitBtn.textContent = "Submit Answer";
+    
     // if we're not at last question yet, increase question number
     if (currentQuestion < quiz.length - 1) {
       currentQuestion++;
@@ -120,15 +124,15 @@ function checkAnswer(){
     } else {
       showResults();
     }
-  }
-}
+  };
+};
 
 function showResults() {
   content.innerHTML = "<h2>You've completed the quiz!</h2>" +
     "<h2>How well do you know Philadelphia?</h2>" +
     "<h2>" + score + " out of " + quiz.length + " questions, " +
     Math.round(score / quiz.length * 100) + "%<h2>";
-}
+};
 
 window.addEventListener("load", askQuestion, false);
 submitBtn.addEventListener("click", checkAnswer, false);
