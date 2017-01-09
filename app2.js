@@ -30,6 +30,14 @@ var quiz = [{
   "question" : "This famous restauranteur got his start in 1995, after opening his first successful restaurant in Old City, Philadelphia; and is 'arguably the key reason for the city's revitalized culinary scene.'",
   "choices" : ["Jen Carroll", "Morimoto", "Stephen Starr", "Anthony Bourdain"],
   "correct" : "Stephen Starr"
+}, {
+  "question" : "The following statements about Philadelphia are all true except one:",
+  "choices" : ["Has the largest Irish and Italian populations in the U.S.", "Held the first Thanksgiving Day Parade in 1920", "Has the nation's oldest zoo", "Had the world's first electronic computer"],
+  "correct" : "Has the largest Irish and Italian populations in the U.S."
+}, {
+  "question" : "Philadelphia was first in our nation to have all of these except one:",
+  "choices" : ["First children's hospital and cancer hospital", "First U.S. university", "First city in the New World to guarantee religious freedom", "First subway system"],
+  "correct" : "First subway system"
 }];
 
 
@@ -53,7 +61,7 @@ function askQuestion(){
   var choices = quiz[currentQuestion].choices,
     choicesHtml = "";
 
-  // loop through choices, and create radio buttons
+  // loop through choices, and creates radio buttons
   for (var i=0; i < choices.length; i++) {
     choicesHtml += "<input type='radio' name='quiz" + currentQuestion +
       "' id='choice" + (i + 1) +
@@ -61,14 +69,14 @@ function askQuestion(){
       " <label for='choice" + (i + 1) + "'>" + choices[i] + "</label><br>";
   };
 
-  // load the question
-  questionContainer.textContent = "Q" + (currentQuestion + 1) + ". " +
+  // loads question
+  questionContainer.textContent = "Question " + (currentQuestion + 1) + ". " +
     quiz[currentQuestion].question;
 
-  // load the choices
+  // loads choices
   choicesContainer.innerHTML = choicesHtml;
 
-  // setup for the first time
+  // first initial setup
   if (currentQuestion === 0){
     scoreContainer.textContent = "Score: 0 correct answers out of " +
       quiz.length + " possible questions.";
@@ -78,7 +86,7 @@ function askQuestion(){
 
 function checkAnswer(){
   // are we asking a question, or moving to next question?
-  if (askingQuestion) {
+  if (askingQuestion){
     submitBtn.textContent = "Next Question";
     askingQuestion = false;
 
@@ -86,21 +94,21 @@ function checkAnswer(){
     var userpick,
       correctIndex,
       radios = document.getElementsByName("quiz" + currentQuestion);
-    for (var i=0; i < radios.length; i++) {
+    for (var i=0; i < radios.length; i++){
       if (radios[i].checked){
         userpick = radios[i].value;
 
       }
 
       // get index of correct answer
-      if (radios[i].value == quiz[currentQuestion].correct) {
+      if (radios[i].value == quiz[currentQuestion].correct){
         correctIndex = i;
       }
     }
 
     // setup if they got it right, or wrong
     var labelStyle = document.getElementsByTagName("label")[correctIndex].style;
-    if (userpick == quiz[currentQuestion].correct) {
+    if (userpick == quiz[currentQuestion].correct){
       score++;
       labelStyle.color = "green";
     } else {
@@ -118,7 +126,7 @@ function checkAnswer(){
     submitBtn.textContent = "Submit Answer";
     
     // if we're not at last question yet, increase question number
-    if (currentQuestion < quiz.length - 1) {
+    if (currentQuestion < quiz.length - 1){
       currentQuestion++;
       askQuestion();
     } else {
@@ -127,9 +135,9 @@ function checkAnswer(){
   };
 };
 
-function showResults() {
+function showResults(){
   content.innerHTML = "<h2>You've completed the quiz!</h2>" +
-    "<h2>How well do you know Philadelphia?</h2>" +
+    "<h2>How did you do?</h2>" +
     "<h2>" + score + " out of " + quiz.length + " questions, " +
     Math.round(score / quiz.length * 100) + "%<h2>";
 };
