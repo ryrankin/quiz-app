@@ -11,11 +11,11 @@ var quiz = [{
   "choices": ["The Underground Railroad", "In God We Trust", "Prohibition", "Oldest Protestant church in PA"],
   "correct": "In God We Trust"
 }, {
-  "question" : "This building, considered the first quarantine-hospital in the Unites States, once housed victims of the Yellow Fever Epidemic, killing one-tenth of Philadelphia's population.",
+  "question" : "This building, considered the first quarantine-hospital in the United States, once housed victims of the Yellow Fever Epidemic, killing one-tenth of Philadelphia's population.",
   "choices" : ["Hospital of the University of Pennsylvania", "Philadelphia Lazaretto", "Pennsylvania Hospital", "Institute of the Pennsylvania Hospital"],
   "correct" : "Philadelphia Lazaretto"
 }, {
-  "question" : "This street, located in Philadelphia, is considered to be the oldest, continuously inhabited, resedential street in America.",
+  "question" : "This street, located in Philadelphia, is considered to be the oldest, continuously inhabited, residential street in America.",
   "choices" : ["Elfreths Alley", "69th Street", "Arch Street", "Delaware Avenue"],
   "correct" : "Elfreths Alley"
 }, {
@@ -27,7 +27,7 @@ var quiz = [{
   "choices" : ["John Heinz Wildlife Refuge", "Fairmount Park", "FDR Park", "John J. Tyler Arboretum"],
   "correct" : "John Heinz Wildlife Refuge"
 }, {
-  "question" : "This famous restauranteur got his start in 1995, after opening his first successful restaurant in Old City, Philadelphia; and is 'arguably the key reason for the city's revitalized culinary scene.'",
+  "question" : "This famous restaurateur got his start in 1995, after opening his first successful restaurant in Old City, Philadelphia; and is 'arguably the key reason for the city's revitalized culinary scene.'",
   "choices" : ["Jen Carroll", "Morimoto", "Stephen Starr", "Anthony Bourdain"],
   "correct" : "Stephen Starr"
 }, {
