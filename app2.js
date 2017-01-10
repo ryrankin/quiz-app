@@ -1,6 +1,6 @@
 var quiz = [{     
   "question": "What historic structure, lying on the Delaware River, was once used during the American Revolutionary War, and later housed prisoners during the American Civil War?",
-  "choices": ["Eastern State Penetentary", "Holmesburg Prison", "Fort Mifflin", "SCI Graterford"],
+  "choices": ["Eastern State Penitentiary", "Holmesburg Prison", "Fort Mifflin", "SCI Graterford"],
   "correct": "Fort Mifflin"
 }, {
   "question" : "Although the current location of William Penn's first landing in PA is marked at Penn's Landing, Philadelphia, what Delaware County city did Mr. Penn originally land in?",

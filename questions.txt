@@ -1,7 +1,7 @@
 How much do you know about Philadelphia?
  -test your knowledge and see
 
- 1. What historic structure, lying on the Delaware River, was once used during the American Revolutionary War, and later housed prisoners during the American civil war?
+ 1. What historic structure, lying on the Delaware River, was once used during the American Revolutionary War, and later housed prisoners during the American Civil War?
  	- Eastern State Penetentary
  	- Holmesburg Prison
  	- Fort Mifflin
@@ -19,13 +19,13 @@ How much do you know about Philadelphia?
  	- Beginning the Prohibition Movement
  	- Instituting "In God We Trust" on currency
 
- 4. This building, considered the first quarantine hospital in the Unites States, once housed victims of the Yellow Fever Epidemic, killing one-tenth of Philadelphia's population. 
+ 4. This building, considered the first quarantine hospital in the United States, once housed victims of the Yellow Fever Epidemic, killing one-tenth of Philadelphia's population. 
  	- Hospital of the University of Pennsylvania
  	- Philadelphia Lazaretto
  	- Pennsylvania Hospital
  	- Institute of the Pennsylvania Hospital
 
- 5. This street, located in Philadelphia, is considered to be the oldest, continuously inhabited, resedential street in America.
+ 5. This street, located in Philadelphia, is considered to be the oldest, continuously inhabited, residential street in America.
  	- Elfreth's Alley
  	- North Front Street
  	- Arch Street
