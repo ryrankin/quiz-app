@@ -1,1 +1,0 @@
-var currentQuestion  = 0;
